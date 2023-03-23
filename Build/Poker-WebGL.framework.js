@@ -3110,11 +3110,7 @@ function _JS_Video_Width(video) {
  return videoInstances[video].videoWidth;
 }
 
-var wr = {
- requestInstances: {},
- nextRequestId: 1,
- loglevel: 2
-};
+var wr = { requestInstances: {}, nextRequestId: 1, loglevel: 2, responses:{}, timer:{}, requests:{}, abortControllers:{} };
 
 function _JS_WebRequest_Abort(requestId) {
  var abortController = wr.abortControllers[requestId];
